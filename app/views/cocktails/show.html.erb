@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card">
+    <h1>Cocktail <%=@cocktail.name%> details:</h1>
+    <p></p>
+  </div>
+  <table class="table table-bordered">
+    <tbody>
+        <th scope="row">Doses</th>
+        <td><% @cocktail.doses.each do |d| %>
+          <%= d.description %>
+          <p>Ingredient:</p>
+          <%= d.ingredient.name %>
+          <% end %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
